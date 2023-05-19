@@ -15,7 +15,7 @@ const ROOM_SETTINGS_LOAD = 'jangouts/room/SETTINGS_LOAD';
 
 const login = (username, room, pin = undefined) => {
   return function(dispatch) {
-    const roomId = parseInt(room);
+    const roomId = room;
 
     dispatch(loginRequest({ roomId, username, pin }));
 

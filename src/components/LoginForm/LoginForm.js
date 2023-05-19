@@ -36,7 +36,7 @@ function roomOptions(rooms) {
  * @returns {Boolean}
  */
 function findRoom(rooms, roomId) {
-  const id = parseInt(roomId);
+  const id = roomId;
   const room = rooms.find((r) => r.id === id);
   return room || {};
 }
@@ -49,7 +49,7 @@ function findRoom(rooms, roomId) {
  * @returns {Function}
  */
 function onSubmit(dispatch, settings) {
-  return function(data) {
+  return function (data) {
     const newSettings = { ...settings, username: data.username, roomId: data.room };
     dispatch(roomActions.saveSettings(newSettings));
     dispatch(roomActions.login(data.username, data.room, data.pin));
@@ -165,7 +165,7 @@ function LoginForm() {
           <input className="form-btn" type="submit" value="Enter" />
         </div>
       </div>
-    </form>
+    </form >
   );
 }
 

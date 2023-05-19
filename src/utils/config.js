@@ -41,8 +41,7 @@ const usingSSL = () => window.location.protocol === 'https:';
 const defaultJanusServer = () => {
   const proto = usingSSL() ? 'wss' : 'ws';
   return [
-    `${proto}://${window.location.hostname}/janus/`,
-    `${proto}://${window.location.hostname}:${PORTS[proto]}/janus/`
+    `${proto}://janus.dev.episoden.com/janus/`,
   ];
 };
 
